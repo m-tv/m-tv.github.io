@@ -8,3 +8,4 @@ Gemfile.lock
 .run.cmd
 .github-run.cmd
 .webrick.cmd
+.new.jekyll.cmd
