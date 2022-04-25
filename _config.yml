@@ -1,0 +1,26 @@
+title:              NetTV
+email:              tri.vh87@gmail.com
+description:        A Blog Theme by Lạc Trần
+author:             Lạc Trần
+baseurl:            ""
+url:                "m-tv.github.io"
+# Social Profiles
+twitter_username:   m-tv
+github_username:    m-tv
+facebook_username:  m-tv
+instagram_username: m-tv
+linkedin_username:  m-tv
+
+# Add your google-analytics ID here to activate google analytics
+google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+
+# Build settings
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap 
+# Build settings
+theme: minima
