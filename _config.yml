@@ -33,10 +33,10 @@ defaults:
       path: "*"
     values:
       layout: default
-
 # Exclude
 exclude:
   - assets/js/bootstrap.bundle.min.js
+  - assets/js/tooltip.js
   - Gemfile
   - Gemfile.lock
   - LICENSE
