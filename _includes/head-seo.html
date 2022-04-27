@@ -1,0 +1,50 @@
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% if site.title %}
+  <title>{% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+{% endif %}
+{% if page.title %}
+  <meta property="og:title"content="{{ page.title }}">
+{% else %}
+  <meta property="og:title" content="{{ site.title }}">
+{% endif %}
+  <meta name="author" content="{% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}" />
+  <meta property="og:locale" content="vi_VN" />
+{% if page.description %}
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+{% else %}
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+{% endif %}
+{% if site.url %}
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}" />
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+{% endif %}
+  <meta property="og:site_name" content="{{ site.title }}">
+{% if page.date %}
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+{% else %}
+  <meta property="og:type" content="website" />
+{% endif %}
+{% if paginator.previous_page %}
+  <link rel="prev" href="{{ paginator.previous_page_path | absolute_url }}" />
+{% endif %}
+{% if paginator.next_page %}
+  <link rel="next" href="{{ paginator.next_page_path | absolute_url }}" />
+{% endif %}
+{% if seo_tag.image %}
+  <meta name="twitter:card" content="{{ page.twitter.card | default: site.twitter.card | default: "summary_large_image" }}" />
+  <meta property="twitter:image" content="{{ seo_tag.image.path }}" />
+{% else %}
+  <meta name="twitter:card" content="summary" />
+{% endif %}
+{% if page.title %}
+  <meta property="twitter:title" content="{{ page.title }}">
+{% else %}
+  <meta property="twitter:title" content="{{ site.title }}">
+{% endif %}
+  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+{% if page.url == "/404.html" %}<meta http-equiv="refresh" content="5; url=/">{% endif %}

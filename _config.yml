@@ -1,4 +1,4 @@
-#timezone: Asia/Ho_Chi_Minh
+# timezone:           Asia/Ho_Chi_Minh
 title:              NetTV
 email:              tri.vh87@gmail.com
 description:        A Blog Theme by Lạc Trần
@@ -15,7 +15,7 @@ linkedin_username:  m-tv
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 # Build settings
 markdown:           kramdown
-paginate:           5
+paginate:           7
 paginate_path:      "/posts/page:num/"
 plugins:
   - jekyll-feed
