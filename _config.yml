@@ -1,7 +1,9 @@
-# timezone:           Asia/Ho_Chi_Minh
+encoding:           UTF-8
+lang:               vi
+timezone:           Asia/Ho_Chi_Minh
 title:              NetTV
 email:              tri.vh87@gmail.com
-description:        A Blog Theme by Lạc Trần
+description:        Blog by Lạc Trần
 author:             Lạc Trần
 baseurl:            ""
 url:                "m-tv.github.io"
@@ -15,34 +17,34 @@ linkedin_username:  m-tv
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 # Build settings
 markdown:           kramdown
-paginate:           7
-paginate_path:      "/posts/page:num/"
+paginate:           5
+paginate_path:      "/blog/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap 
-
-# SASS
-sass:
-  sass_dir: _sass
-  style: :compressed
-
-# Defaults
-defaults:
-  - scope:
-      path: "*"
-    values:
-      layout: default
-# Exclude
-exclude:
-  - assets/js/bootstrap.bundle.min.js
-  - assets/js/tooltip.js
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - README.md
+  - jekyll-seo-tag
 # html minify
 compress_html:
   comments: ["<!--", "-->"]
   blanklines: true
 #  blanklines: false
+# SASS
+sass:
+  sass_dir: _sass
+  style: :compressed
+#theme: minima
+# # Defaults
+# defaults:
+#   - scope:
+#       path: "*"
+#     values:
+#       layout: default
+# # Exclude
+# exclude:
+#   - assets/js/bootstrap.bundle.min.js
+#   - assets/js/tooltip.js
+#   - Gemfile
+#   - Gemfile.lock
+#   - LICENSE
+#   - README.md
