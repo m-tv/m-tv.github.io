@@ -1,24 +1,9 @@
 ---
 layout: compress
 ---
-{%- assign url = '/' | prepend: site.baseurl | prepend: site.url -%}
-{%- assign title = site.title -%}
-{%- assign description = site.description -%}
-{%- assign image = '/assets/img/image.jpg' | prepend: site.baseurl | prepend: site.url -%}
 
-{%- if page.url != '/' -%}
-  {%- if page.url -%}
-    {%- assign url = page.url | prepend: site.baseurl | prepend: site.url -%}
-  {%- endif -%}
-  {%- if page.title -%}
-    {%- assign title = page.title | append: ' | ' | append: site.title  -%}
-  {%- endif -%}
-  {%- if page.description -%}
-    {%- assign description = page.description -%}
-  {%- endif -%}
-{%- endif -%}
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="{{ page.lang | default: site.lang | default: "vi" }}">
 {% include head.html %}
 <body>
   {% include navbar.html %}
