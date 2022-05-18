@@ -5,7 +5,7 @@ _site
 node_modules
 Gemfile.lock
 *.gem
-.run.cmd
-.github.run.cmd
-.webrick.cmd
-.new.jeky.cmd
+.run.serve.bat
+.github.run.bat
+.webrick.bat
+.new.jeky.bat
